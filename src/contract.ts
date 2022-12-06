@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import address from './artifacts/address.json';
 import Verifier from './artifacts/TurboVerifier.json';
-import { generateCalldata, ABI } from './generate_calldata';
+import { generateCalldata, abi } from './generate_calldata';
 
 let verifier: ethers.Contract;
 
@@ -17,17 +17,17 @@ export async function connectContract() {
     console.log("Connect to Verifier Contract:", Verifier);
 }
 
-export async function verifyProof(input: ABI) {
+export async function verifyProof(input: abi) {
 
     await connectContract();
 
     let calldata = await generateCalldata(input);
 
     if (calldata) {
-        let valid = await verifier.verifyProof(calldata);
+        let valid = await verifier.verify(calldata);
         if (valid) {
-            console.log("Proof verified");
-            return;
+            // console.log("Proof verified");
+            return true;
         }
         else {
             throw new Error("Invalid proof.");

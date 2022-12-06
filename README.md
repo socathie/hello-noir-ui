@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+# hello-noir-ui
+
+## Step-by-Step Setup
+
+0. Make sure to use this as a submodule under `socathie/hello-noir` repo.
+1. `npm i`
+2. (Optional) `npm run copy:all` to copy all necessary public files
+3. `npm start`
+
+---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
