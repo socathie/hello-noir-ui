@@ -1,5 +1,7 @@
 # hello-noir-ui
 
+Demo hosted on: https://hello-noir.netlify.app/
+
 ## Step-by-Step Setup
 
 0. Make sure to use this as a submodule under `socathie/hello-noir` repo.
