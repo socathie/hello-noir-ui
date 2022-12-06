@@ -47,7 +47,6 @@ export default function App() {
     return (
         <ThemeProvider theme={darkTheme}>
             <CssBaseline />
-            <WalletConnector />
             <Box
                 display="flex"
                 flexDirection="column"
@@ -81,6 +80,7 @@ export default function App() {
                 {error ? <Alert severity="error" sx={{ textAlign: "left" }}>{errorMsg}</Alert> : <div />}
                 {verified ? <Alert severity="success" sx={{ textAlign: "left" }}>Verified!</Alert> : <div />}
             </Box>
+            <WalletConnector />
         </ThemeProvider>
     )
 }
