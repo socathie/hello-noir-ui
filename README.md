@@ -7,7 +7,8 @@ Demo hosted on: https://hello-noir.netlify.app/
 0. Make sure to use this as a submodule under `socathie/hello-noir` repo.
 1. `npm i`
 2. (Optional) `npm run copy:all` to copy all necessary public files
-3. `npm start`
+3. Edit [circSize](https://github.com/socathie/hello-noir-ui/blob/master/src/setup_generic_prover.ts#L7) if needed
+4. `npm start`
 
 ---
 
