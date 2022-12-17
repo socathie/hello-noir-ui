@@ -76,7 +76,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "copy:all": "npm run copy:wasm && npm run copy:circuit && npm run copy:worker",
+    "copy:all": "npm run copy:wasm && npm run copy:circuit && npm run copy:worker && npm run copy:acir",
     "copy:wasm": "cp ./node_modules/@noir-lang/noir_wasm/noir_wasm_bg.wasm ./public/ && cp ./node_modules/@noir-lang/aztec_backend/aztec_backend_bg.wasm ./public/ && cp ../node_modules/@noir-lang/barretenberg/dest/wasm/barretenberg.wasm ./public/",
     "copy:worker": "cp ./node_modules/@noir-lang/barretenberg/dest/worker.js ./public/",
     "copy:circuit": "cp ../circuits/src/main.buf ./public/",
