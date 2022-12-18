@@ -7,7 +7,7 @@ onmessage = async (event) => {
     const { url, acir, input } = event.data;
 
     let values = [];
-    for (const [_, v] of Object.entries(input)) {
+    for (const [ , v] of Object.entries(input)) {
         let entry_values = AnyToHexStrs(v);
         values = values.concat(entry_values);
     }
@@ -41,7 +41,7 @@ function AnyToHexStrs(any_object) {
         let number_object = any_object;
         let number_hex = number_object.toString(16);
         // The rust code only accepts even hex digits
-        let is_even_hex_length = number_hex.length % 2 == 0;
+        let is_even_hex_length = number_hex.length % 2 === 0;
         if (is_even_hex_length) {
             values.push("0x" + number_hex)
         } else {
